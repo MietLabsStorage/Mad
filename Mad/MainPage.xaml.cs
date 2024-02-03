@@ -1,4 +1,6 @@
-﻿namespace Mad;
+﻿using Mad.Pages;
+
+namespace Mad;
 
 public partial class MainPage : ContentPage
 {
@@ -9,7 +11,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private async void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
 
@@ -18,7 +20,7 @@ public partial class MainPage : ContentPage
 		else
 			CounterBtn.Text = $"Clicked {count} times";
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		await Navigation.PushAsync(new EditNotePage(true));
 	}
 }
 
