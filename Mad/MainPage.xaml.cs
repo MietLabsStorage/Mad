@@ -1,4 +1,4 @@
-﻿using Mad.Pages;
+﻿using Mad.Pages.Menu;
 
 namespace Mad;
 
@@ -20,7 +20,7 @@ public partial class MainPage : ContentPage
 		else
 			CounterBtn.Text = $"Clicked {count} times";
 
-		await Navigation.PushAsync(new EditNotePage(true));
+		await Navigation.PushAsync(new MenuPage());
 	}
 }
 

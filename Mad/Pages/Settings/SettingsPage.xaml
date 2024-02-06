@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="Mad.Pages.EditNotePage"
+    x:Class="Mad.Pages.Settings.SettingsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="EditNotePage">
@@ -20,24 +20,15 @@
         Margin="10"
         HorizontalOptions="Center"
         Spacing="10">
-        <Entry Placeholder="Название" Style="{StaticResource formInput}" />
-        <Label Style="{StaticResource placeholder}" Text="Название" />
-        <Editor
-            MinimumHeightRequest="200"
-            Placeholder="Сообщение"
-            Style="{StaticResource formInput}" />
-        <Label Style="{StaticResource placeholder}" Text="Сообщение" />
+        <Entry Placeholder="Telegram user id" Style="{StaticResource formInput}" />
+        <Label Style="{StaticResource placeholder}" Text="Telegram user id" />
+        <Entry Placeholder="Telegram bot id" Style="{StaticResource formInput}" />
+        <Label Style="{StaticResource placeholder}" Text="Telegram bot id" />
 
         <Button
             x:Name="SaveBtn"
             Clicked="SaveBtn_Clicked"
             Text="Сохранить" />
-
-        <Button
-            x:Name="SendToTg"
-            Clicked="SendToTg_Clicked"
-            Text="Отправить" />
-
         <Button
             x:Name="BackBtn"
             Clicked="BackBtn_Clicked"
