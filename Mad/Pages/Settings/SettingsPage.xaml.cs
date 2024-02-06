@@ -7,7 +7,12 @@ public partial class SettingsPage : ContentPage
 		InitializeComponent();
 	}
 
-    void BackBtn_Clicked(System.Object sender, System.EventArgs e)
+    async void BackBtn_Clicked(System.Object sender, System.EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
+
+    void SaveBtn_Clicked(System.Object sender, System.EventArgs e)
     {
     }
 }

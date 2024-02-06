@@ -24,6 +24,8 @@
         <Label Style="{StaticResource placeholder}" Text="Telegram user id" />
         <Entry Placeholder="Telegram bot id" Style="{StaticResource formInput}" />
         <Label Style="{StaticResource placeholder}" Text="Telegram bot id" />
+        <Entry Placeholder="Weather key" Style="{StaticResource formInput}" />
+        <Label Style="{StaticResource placeholder}" Text="Weather key" />
 
         <Button
             x:Name="SaveBtn"

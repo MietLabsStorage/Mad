@@ -13,9 +13,9 @@
             Clicked="CreateNote_Clicked"
             Text="Новая заметка" />
          <Button
-            x:Name="Notes"
-            Clicked="Notes_Clicked"
-            Text="Заметки" />
+            x:Name="Weather"
+            Clicked="Weather_Clicked"
+            Text="Погода" />
          <Button
             x:Name="Settings"
             Clicked="Settings_Clicked"

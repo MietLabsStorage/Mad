@@ -10,8 +10,8 @@ public partial class EditNotePage : ContentPage
         InitializeComponent();
 
         Title = isNew
-            ? "�������� �������"
-            : "�������������� �������";
+            ? "Создание заметки"
+            : "Редактирование заметки";
     }
 
     private async void BackBtn_Clicked(object sender, EventArgs e)
