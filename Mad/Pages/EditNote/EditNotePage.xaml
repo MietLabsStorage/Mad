@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="Mad.Pages.EditNotePage"
+    x:Class="Mad.Pages.EditNote.EditNotePage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="EditNotePage">
@@ -20,9 +20,13 @@
         Margin="10"
         HorizontalOptions="Center"
         Spacing="10">
-        <Entry Placeholder="Название" Style="{StaticResource formInput}" />
+        <Entry
+            x:Name="FormTitle"
+            Placeholder="Название"
+            Style="{StaticResource formInput}" />
         <Label Style="{StaticResource placeholder}" Text="Название" />
         <Editor
+            x:Name="FormDescription"
             MinimumHeightRequest="200"
             Placeholder="Сообщение"
             Style="{StaticResource formInput}" />

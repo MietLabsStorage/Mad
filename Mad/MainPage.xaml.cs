@@ -1,4 +1,5 @@
-﻿using Mad.Pages.Menu;
+﻿using Mad.Pages.EditNote;
+using Mad.Pages.Menu;
 
 namespace Mad;
 

@@ -1,4 +1,5 @@
-﻿using Mad.Pages.Settings;
+﻿using Mad.Pages.EditNote;
+using Mad.Pages.Settings;
 using Mad.Pages.Weather;
 
 namespace Mad.Pages.Menu;

@@ -49,11 +49,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.15" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.7" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\EditNotePage.xaml">
+	  <ProjectReference Include="..\Mad.Database\Mad.Database.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\EditNote\EditNotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
