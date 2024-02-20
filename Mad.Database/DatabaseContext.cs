@@ -8,6 +8,7 @@ namespace Mad.Database
     public class DatabaseContext : DbContext
     {
         public DbSet<Note> Notes { get; set; }
+        public DbSet<Settings> Settings { get; set; }
 
         public DatabaseContext()
         {

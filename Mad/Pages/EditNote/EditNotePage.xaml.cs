@@ -9,8 +9,8 @@ public partial class EditNotePage : ContentPage
 		_editNoteViewModel = Application.Current.MainPage.Handler.MauiContext.Services.GetRequiredService<EditNoteViewModel>();
 
         Title = isNew
-            ? "�������� �������"
-            : "�������������� �������";
+            ? "Создать заметку"
+            : "Редактировать заметку";
     }
 
     private async void BackBtn_Clicked(object sender, EventArgs e)

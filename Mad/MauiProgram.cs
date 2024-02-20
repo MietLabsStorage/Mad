@@ -1,5 +1,6 @@
 ﻿using Mad.Database;
 using Mad.Pages.EditNote;
+using Mad.Services;
 using Mad.Shared;
 using Microsoft.Extensions.Logging;
 
@@ -24,6 +25,7 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
+		builder.Services.AddSingleton<SettingsService>();
         builder.RegisterAppServices();
 		builder.RegisterViewModels();
 

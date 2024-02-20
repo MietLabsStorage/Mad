@@ -68,10 +68,12 @@
 	  <None Remove="Pages\Menu\" />
 	  <None Remove="Pages\Settings\" />
 	  <None Remove="Pages\Weather\" />
+	  <None Remove="Services\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Pages\Menu\" />
 	  <Folder Include="Pages\Settings\" />
 	  <Folder Include="Pages\Weather\" />
+	  <Folder Include="Services\" />
 	</ItemGroup>
 </Project>
