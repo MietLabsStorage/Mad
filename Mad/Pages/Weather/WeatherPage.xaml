@@ -7,16 +7,13 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="10*" />
+            <RowDefinition Height="12*" />
         </Grid.RowDefinitions>
         <FlexLayout
             Grid.Row="0"
             JustifyContent="End"
             VerticalOptions="Center">
-            <Button
-                x:Name="Reload"
-                Clicked="Reload_Clicked"
-                Text="O" />
+            <Button ImageSource="refresh.ico" Text="Обновить" />
         </FlexLayout>
         <ScrollView
             Grid.Row="1"

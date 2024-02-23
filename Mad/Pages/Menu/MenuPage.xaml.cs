@@ -1,4 +1,5 @@
 ﻿using Mad.Pages.EditNote;
+using Mad.Pages.NotesList;
 using Mad.Pages.Settings;
 using Mad.Pages.Weather;
 
@@ -17,13 +18,18 @@ public partial class MenuPage : ContentPage
         await Navigation.PushAsync(new EditNotePage(true));
     }
 
-    async void Settings_Clicked(object sender, EventArgs e)
+    public async void Settings_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new SettingsPage());
     }
 
-    async void Weather_Clicked(object sender, EventArgs e)
+    public async void Weather_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new WeatherPage());
+    }
+
+    public async void Notes_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new NotesListPage());
     }
 }

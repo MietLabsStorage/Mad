@@ -1,10 +1,10 @@
 ﻿using Mad.Database;
 using Mad.Pages.EditNote;
+using Mad.Pages.NotesList;
 using Mad.Pages.Settings;
 using Mad.Pages.Weather;
 using Mad.Services;
 using Mad.Shared;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace Mad;
@@ -50,6 +50,7 @@ public static class MauiProgram
         mauiAppBuilder.Services.AddScoped<EditNoteViewModel>();
         mauiAppBuilder.Services.AddScoped<SettingsViewModel>();
         mauiAppBuilder.Services.AddScoped<WeatherViewModel>();
+        mauiAppBuilder.Services.AddScoped<NotesListViewModel>();
         return mauiAppBuilder;
     }
 }

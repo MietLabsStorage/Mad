@@ -1,6 +1,4 @@
-﻿using Mad.Pages.Settings;
-
-namespace Mad.Pages.Weather;
+﻿namespace Mad.Pages.Weather;
 
 public partial class WeatherPage : ContentPage
 {

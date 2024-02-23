@@ -21,6 +21,11 @@
             Style="{StaticResource formInput}"
             Text="Новая заметка" />
         <Button
+            x:Name="Notes"
+            Clicked="Notes_Clicked"
+            Style="{StaticResource formInput}"
+            Text="Заметки" />
+        <Button
             x:Name="Weather"
             Clicked="Weather_Clicked"
             Style="{StaticResource formInput}"

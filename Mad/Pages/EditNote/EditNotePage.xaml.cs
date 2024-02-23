@@ -2,8 +2,8 @@ namespace Mad.Pages.EditNote;
 
 public partial class EditNotePage : ContentPage
 {
-	private readonly EditNoteViewModel _editNoteViewModel;
-	public EditNotePage(bool isNew)
+    private readonly EditNoteViewModel _editNoteViewModel;
+    public EditNotePage(bool isNew)
 	{
 		InitializeComponent();
 		_editNoteViewModel = Application.Current.MainPage.Handler.MauiContext.Services.GetRequiredService<EditNoteViewModel>();

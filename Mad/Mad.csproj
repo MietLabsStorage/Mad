@@ -36,6 +36,8 @@
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appiconfg.svg" />
+		<MauiIcon Include="Resources\AppIcon\refresh.png" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
@@ -62,16 +64,20 @@
 	  <MauiXaml Update="Pages\EditNote\EditNotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\NotesList\NotesListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Remove="Pages\Menu\" />
 	  <None Remove="Pages\Settings\" />
 	  <None Remove="Pages\Weather\" />
+	  <None Remove="Resources\AppIcon\appiconfg.svg" />
+	  <None Remove="Resources\AppIcon\refresh.png" />
 	  <None Remove="Services\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Pages\Menu\" />
 	  <Folder Include="Services\" />
 	</ItemGroup>
 </Project>
