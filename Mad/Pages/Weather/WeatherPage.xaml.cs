@@ -1,18 +1,19 @@
-﻿namespace Mad.Pages.Weather;
+﻿using Mad.Pages.Settings;
+
+namespace Mad.Pages.Weather;
 
 public partial class WeatherPage : ContentPage
 {
-	public WeatherPage()
+    private readonly WeatherViewModel _weatherViewModel;
+
+    public WeatherPage()
 	{
 		InitializeComponent();
-	}
+        _weatherViewModel = Application.Current.MainPage.Handler.MauiContext.Services.GetRequiredService<WeatherViewModel>();
+    }
 
-    async void Reload_Clicked(System.Object sender, System.EventArgs e)
+    async void Reload_Clicked(object sender, EventArgs e)
     {
-		var client = new HttpClient();
-		client.DefaultRequestHeaders.Add("X-Yandex-API-Key", "KEY");
-
-		var weatherInfoResponse = await client.GetAsync("https://api.weather.yandex.ru/v2/informers?lat=47&lon=56&lang=ru_RU");
-        var weatherInfo = await weatherInfoResponse.Content.ReadAsStringAsync();
+        await _weatherViewModel.LoadWeatherAsync();
     }
 }

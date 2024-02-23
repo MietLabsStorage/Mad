@@ -11,6 +11,7 @@ namespace Mad.Pages.EditNote
         public EditNoteViewModel(DatabaseContext databaseContext, SettingsService settingsService)
         {
             _databaseContext = databaseContext;
+            _settingsService = settingsService;
         }
 
         public async Task SaveNoteAsync(string title, string desription)
@@ -25,11 +26,15 @@ namespace Mad.Pages.EditNote
             await _databaseContext.SaveChangesAsync();
         }
 
-        public async Task SendToTg(System.Object sender, System.EventArgs e)
+        public async Task SendToTgAsync(string title, string body)
         {
             if (!string.IsNullOrEmpty(_settingsService.TgBotId) && !string.IsNullOrEmpty(_settingsService.TgUserId))
             {
-                await new HttpClient().GetAsync("https://api.telegram.org/botBOTID/sendMessage?chat_id=USERID&text=hello");
+                // TODO: add regex for replace \r without \n to \r\n in body
+                var text = $"<b>{title}</b>\r\n{body}";
+                var url = $"https://api.telegram.org/bot{_settingsService.TgBotId}/sendMessage?chat_id={_settingsService.TgUserId}&text={text}&parse_mode=html";
+                await new HttpClient().GetAsync(url);
+                // TODO: process bad results
             }
             else
             {

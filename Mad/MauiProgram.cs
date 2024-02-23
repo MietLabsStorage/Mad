@@ -1,7 +1,10 @@
 ﻿using Mad.Database;
 using Mad.Pages.EditNote;
+using Mad.Pages.Settings;
+using Mad.Pages.Weather;
 using Mad.Services;
 using Mad.Shared;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace Mad;
@@ -29,7 +32,11 @@ public static class MauiProgram
         builder.RegisterAppServices();
 		builder.RegisterViewModels();
 
-		return builder.Build();
+		var builded = builder.Build();
+
+		//builded.Services.GetRequiredService<DatabaseContext>().Database.Migrate();
+
+		return builded;
 	}
 
     public static MauiAppBuilder RegisterAppServices(this MauiAppBuilder mauiAppBuilder)
@@ -41,6 +48,8 @@ public static class MauiProgram
     public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
     {
         mauiAppBuilder.Services.AddScoped<EditNoteViewModel>();
+        mauiAppBuilder.Services.AddScoped<SettingsViewModel>();
+        mauiAppBuilder.Services.AddScoped<WeatherViewModel>();
         return mauiAppBuilder;
     }
 }

@@ -12,7 +12,7 @@
                 <Setter Property="FontSize" Value="8" />
             </Style>
             <Style x:Key="formInput" TargetType="View">
-                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="WidthRequest" Value="300" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -20,11 +20,20 @@
         Margin="10"
         HorizontalOptions="Center"
         Spacing="10">
-        <Entry Placeholder="Telegram user id" Style="{StaticResource formInput}" />
+        <Entry
+            x:Name="TgUserId"
+            Placeholder="Telegram user id"
+            Style="{StaticResource formInput}" />
         <Label Style="{StaticResource placeholder}" Text="Telegram user id" />
-        <Entry Placeholder="Telegram bot id" Style="{StaticResource formInput}" />
+        <Entry
+            x:Name="TgBotId"
+            Placeholder="Telegram bot id"
+            Style="{StaticResource formInput}" />
         <Label Style="{StaticResource placeholder}" Text="Telegram bot id" />
-        <Entry Placeholder="Weather key" Style="{StaticResource formInput}" />
+        <Entry
+            x:Name="YaWeatherKey"
+            Placeholder="Weather key"
+            Style="{StaticResource formInput}" />
         <Label Style="{StaticResource placeholder}" Text="Weather key" />
 
         <Button

@@ -1,5 +1,4 @@
-﻿using System;
-namespace Mad.Database.Models
+﻿namespace Mad.Database.Models
 {
 	public class Settings
 	{

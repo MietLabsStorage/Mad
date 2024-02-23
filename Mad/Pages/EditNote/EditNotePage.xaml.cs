@@ -24,8 +24,8 @@ public partial class EditNotePage : ContentPage
         await Navigation.PopAsync();
     }
 
-    async void SendToTg_Clicked(System.Object sender, System.EventArgs e)
+    async void SendToTg_Clicked(object sender, EventArgs e)
     {
-        await new HttpClient().GetAsync("https://api.telegram.org/botBOTID/sendMessage?chat_id=USERID&text=hello");
+        await _editNoteViewModel.SendToTgAsync(FormTitle.Text, FormDescription.Text);
     }
 }

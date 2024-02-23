@@ -4,6 +4,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="EditNotePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="formInput" TargetType="View">
+                <Setter Property="WidthRequest" Value="300" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <VerticalStackLayout
         Margin="10"
         HorizontalOptions="Center"
@@ -11,14 +18,17 @@
         <Button
             x:Name="CreateNote"
             Clicked="CreateNote_Clicked"
+            Style="{StaticResource formInput}"
             Text="Новая заметка" />
-         <Button
+        <Button
             x:Name="Weather"
             Clicked="Weather_Clicked"
+            Style="{StaticResource formInput}"
             Text="Погода" />
-         <Button
+        <Button
             x:Name="Settings"
             Clicked="Settings_Clicked"
+            Style="{StaticResource formInput}"
             Text="Настройки" />
     </VerticalStackLayout>
 </ContentPage>

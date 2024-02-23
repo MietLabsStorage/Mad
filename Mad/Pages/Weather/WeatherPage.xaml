@@ -7,26 +7,29 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
-        <FlexLayout Grid.Row="0" JustifyContent="End" VerticalOptions="Center">
-            <Button x:Name="Reload" Text="O" Clicked="Reload_Clicked"></Button>
+        <FlexLayout
+            Grid.Row="0"
+            JustifyContent="End"
+            VerticalOptions="Center">
+            <Button
+                x:Name="Reload"
+                Clicked="Reload_Clicked"
+                Text="O" />
         </FlexLayout>
-    <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Always" Grid.Row="1">
+        <ScrollView
+            Grid.Row="1"
+            HorizontalScrollBarVisibility="Always"
+            Orientation="Vertical">
             <HorizontalStackLayout
-        Margin="10"
-        VerticalOptions="Center"
-        Spacing="10">
-        <Button
-            x:Name="w1"
-            Text="w1" />
-         <Button
-            x:Name="w2"
-            Text="w2" />
-         <Button
-            x:Name="w3"
-            Text="w3" />
-        </HorizontalStackLayout>
-    </ScrollView>
+                Margin="10"
+                Spacing="10"
+                VerticalOptions="Center">
+                <Button x:Name="w1" Text="w1" />
+                <Button x:Name="w2" Text="w2" />
+                <Button x:Name="w3" Text="w3" />
+            </HorizontalStackLayout>
+        </ScrollView>
     </Grid>
 </ContentPage>
