@@ -8,12 +8,13 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="12*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <FlexLayout
             Grid.Row="0"
             JustifyContent="End"
             VerticalOptions="Center">
-            <Button ImageSource="refresh.ico" Text="Обновить" />
+            <Button ImageSource="refresh.ico" Text="Обновить" Clicked="Reload_Clicked"/>
         </FlexLayout>
         <ScrollView
             Grid.Row="1"
@@ -22,11 +23,20 @@
             <HorizontalStackLayout
                 Margin="10"
                 Spacing="10"
-                VerticalOptions="Center">
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
                 <Button x:Name="w1" Text="w1" />
                 <Button x:Name="w2" Text="w2" />
                 <Button x:Name="w3" Text="w3" />
             </HorizontalStackLayout>
         </ScrollView>
+        <FlexLayout Grid.Row="2"
+JustifyContent="Center"
+VerticalOptions="Center">
+            <Button
+            x:Name="BackBtn"
+            Clicked="BackBtn_Clicked"
+            Text="Назад" />
+        </FlexLayout>
     </Grid>
 </ContentPage>

@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mad.Database", "Mad.Databas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mad.Shared", "Mad.Shared\Mad.Shared.csproj", "{13327278-21C9-42C8-8D67-62F85C3C46BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mad.Tests", "Mad.Tests\Mad.Tests.csproj", "{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13327278-21C9-42C8-8D67-62F85C3C46BA} = {13327278-21C9-42C8-8D67-62F85C3C46BA}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +34,10 @@ Global
 		{13327278-21C9-42C8-8D67-62F85C3C46BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13327278-21C9-42C8-8D67-62F85C3C46BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13327278-21C9-42C8-8D67-62F85C3C46BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

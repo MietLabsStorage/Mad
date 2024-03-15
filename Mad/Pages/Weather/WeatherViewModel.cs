@@ -1,4 +1,5 @@
 ﻿using Mad.Services;
+using Mad.Shared.YaWeather;
 
 namespace Mad.Pages.Weather
 {
@@ -11,13 +12,14 @@ namespace Mad.Pages.Weather
             _settingsService = settingsService;
         }
 
-        public async Task LoadWeatherAsync()
+        public async Task<YaWeatherContract> LoadWeatherAsync()
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("X-Yandex-API-Key", _settingsService.YaWetherKey);
 
             var weatherInfoResponse = await client.GetAsync("https://api.weather.yandex.ru/v2/informers?lat=37&lon=56&lang=ru_RU");
             var weatherInfo = await weatherInfoResponse.Content.ReadAsStringAsync();
+            return YaWeatherContract.Parse(weatherInfo);
         }
     }
 }
