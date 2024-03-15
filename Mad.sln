@@ -9,10 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mad.Database", "Mad.Databas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mad.Shared", "Mad.Shared\Mad.Shared.csproj", "{13327278-21C9-42C8-8D67-62F85C3C46BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mad.Tests", "Mad.Tests\Mad.Tests.csproj", "{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mad.Tests", "Mad.Tests\Mad.Tests.csproj", "{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}"
 	ProjectSection(ProjectDependencies) = postProject
 		{13327278-21C9-42C8-8D67-62F85C3C46BA} = {13327278-21C9-42C8-8D67-62F85C3C46BA}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mad.Tests.Ui", "Mad.Tests.Ui\Mad.Tests.Ui.csproj", "{2F5EFDC1-2CCD-4E5C-A09B-F88ABAEE83B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E34D0D6-67EE-4F4B-A332-16959DB7E2CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F5EFDC1-2CCD-4E5C-A09B-F88ABAEE83B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F5EFDC1-2CCD-4E5C-A09B-F88ABAEE83B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F5EFDC1-2CCD-4E5C-A09B-F88ABAEE83B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F5EFDC1-2CCD-4E5C-A09B-F88ABAEE83B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
